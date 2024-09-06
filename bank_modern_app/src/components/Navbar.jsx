@@ -10,10 +10,7 @@ const Navbar = () => {
       <img src= {logo} alt='hoobank' className='w-[124px] h-[32px]'/>
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
           {navLinks.map((nav, index) => (
-            <li
-              key={nav.id}
-              className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} text-white`}
-            >
+            <li className={`font-poppins font-normal  text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} text-white`}>
               <a href={`#${nav.id}`}>
                 {nav.title}
               </a>
@@ -25,7 +22,7 @@ const Navbar = () => {
           <img 
             src={toggle ? close : menu} 
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle((prev) => !prev)}
           />
               
